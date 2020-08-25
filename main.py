@@ -14,14 +14,14 @@ import csv
 from scipy.stats import ttest_ind
 from statannot import add_stat_annotation
 #extracting data from specified folders
-folders=glob.glob("/home/healthineer/Documents/ETH Work/ABA analysis for comparsion of homozygote and heterozygote/*/*")
+folders=glob.glob("/home/healthineer/PycharmProject/tau_project/venv/ABA-pipeline/*/*")
 num_elements=len(folders)
 group_names={};
 file_paths={};
 print(num_elements)
 for i in range(num_elements):
 	file_paths[i]=folders[i]
-	group_name =folders[i].replace("/home/healthineer/Documents/ETH Work/ABA analysis for comparsion of homozygote and heterozygote/","").replace("/*", "")
+	group_name =folders[i].replace("/home/healthineer/PycharmProject/tau_project/venv/ABA-pipeline/","").replace("/*", "")
 	index=group_name.find("/");
 	group_names[i]=group_name[0:index];
 
